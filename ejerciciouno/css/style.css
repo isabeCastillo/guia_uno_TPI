@@ -9,7 +9,6 @@ h1, p, a {
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     text-align: center;
-    color: antiquewhite;
 }
 
 .resultado {
@@ -20,15 +19,17 @@ h1, p, a {
 
 h1 {
     font-size: 2rem;
-
+    color: white;
 }
 
 a {
     font-size: 1rem;
+    color: white;
 }
 
 p {
     font-size: 1.5rem;
+    color: white;
 }
 
 form {
@@ -58,4 +59,12 @@ button {
 
 button:hover {
     background: #45a049;
+}
+
+p.error { 
+    color: red !important;
+}
+
+p.ok { 
+    color: green !important;
 }
