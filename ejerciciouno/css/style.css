@@ -1,0 +1,34 @@
+body {
+    background-color: #0a7551;
+    background: -webkit-linear-gradient(to rigth, #01271a, #0a7551);
+    background: linear-gradient(to rigth, #01271a, #0a7551);
+}
+
+h1, p, a {
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    text-align: center;
+    line-height: .8;
+    color: antiquewhite;
+}
+
+.contenido {
+    max-width: 1200px;
+    margin: 5rem auto 0 auto;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 4rem;
+
+}
+
+a {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 2.2rem;
+}
