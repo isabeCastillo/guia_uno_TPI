@@ -1,6 +1,6 @@
 <?php
 $resultado="";
-
+$pasos="";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $x1 = isset($_POST['x1']) ? floatval($_POST['x1']) : null;
     $y1 = isset($_POST['y1']) ? floatval($_POST['y1']) : null;
@@ -12,24 +12,38 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $resultado = "Ingrese todos los componetes!";
     } else {
         //ecuacion
-        $dx = $x2 - $x1;
-        $dy = $y2 - $y1;
-        $dz = $z2 - $z1;
+        $dx = $x1 - $x2;
+        $dy = $y1 - $y2;
+        $dz = $z1 - $z2;
 
-        $resultado = "La pendiente R3 es: ($dx, $dy, $dz)";
+        //cuadrado
+        $dx2 = $dx * $dx;
+        $dy2 = $dy * $dy;
+        $dz2 = $dz * $dz;
+
+        //suma de cuadrados
+        $suma = $dx2 + $dy2 + $dz2;
+
+        //sacando distancia con la raiz
+        $distancia = sqrt($suma);
+
+        $dist = round($distancia, 2);
+        $resultado = "La distancia entre P₁ y P₂ es: {$dist}";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Calcular "pendiente" en R3</h1>
+    <h1>Calcular distancia entre dos puntos en R3</h1>
+    <p>Ingresa las coordenadas de P₁(x₁,y₁,z₁) y P₂(x₂,y₂,z₂)</p>
     <form action="" method="post">
         <label for="">Ingrese el valor de X1</label>
         <input type="number" name="x1" id="">
