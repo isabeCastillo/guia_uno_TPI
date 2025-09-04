@@ -69,3 +69,47 @@ p.error {
 p.ok { 
     color: green !important;
 }
+
+table {
+    margin-top: 25px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #0a7551;
+    color: white;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Mensajes */
+.error {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.ok {
+    color: #00ff99;
+    font-weight: bold;
+    margin-top: 15px;
+}
