@@ -1,7 +1,5 @@
 body {
-    background: #0a7551;
-    background: -webkit-linear-gradient(to rigth, #01271a, #0a7551);
-    background: linear-gradient(to rigth, #01271a, #0a7551);
+    background-color: #272643;
     margin: 80px;
 }
 
@@ -49,16 +47,19 @@ input {
 }
 
 button {
-    background: #4CAF50;
-    color: white;
-    padding: 10px;
+    background: #bae8e8;
+    color: #2c698d;
+    padding: 15px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
 }
 
 button:hover {
-    background: #45a049;
+    background: #2c698d;
+    color: #bae8e8;
 }
 
 p.error { 
