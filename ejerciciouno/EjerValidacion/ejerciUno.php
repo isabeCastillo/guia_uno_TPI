@@ -8,11 +8,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $codigoPostal = trim($_POST["codigoPostal"]);
     $provincia    = trim($_POST["provincia"]);
 
-    if (preg_match('/[0-9]/', $nombre)) {
+    if (empty($nombre) || empty($ciudad) || empty($telefono) || empty($codigoPostal) || empty($provincia)) {
+        $mensaje = "Todos los campos son obligatorios.";
+    } elseif (preg_match('/[0-9]/', $nombre)) {
         $mensaje = "El campo  Nombre completo no puede contener numeros.";
     } elseif (preg_match('/[0-9]/', $ciudad)) {
         $mensaje = "El campo ciudad no puede contener numeros";
-    } elseif (!ctype_digit($telefono) > 9) {
+    } elseif (!ctype_digit($telefono) || strlen($telefono) > 9) {
         $mensaje = "El campo telefono debe contener solo números y no más de 9 dígitos";
     } elseif (!ctype_digit($codigoPostal) || strlen($codigoPostal) !== 5) {
         $mensaje = "El campo codigo postal debe contener exactamente 5 números";
